@@ -1,0 +1,106 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #e3f2fd;
+}
+.wrapper{
+    height: 270px;
+    width: 420px;
+    border-radius: 7px;
+    background-color: #0B85ff;
+    padding: 30px 30px 35px;
+    transition: height 0.2s ease;
+}
+.wrapper.active{
+    height: 525px;
+
+}
+.wrapper form{
+    border-radius: 7px;
+justify-content: center;
+cursor: pointer;
+    height: 210px;
+    display: flex;
+    text-align: center;
+        align-items: center;
+    background-color: #fff;
+    transition: height 0.2s ease;
+
+}
+.wrapper.active form{
+    height: 225px;
+    pointer-events: none;
+}
+form img{
+    max-width: 148px;
+    display: none;
+}
+.wrapper.active form img{
+  display: block;
+}
+/* form .content{
+    display: none;
+} */
+.wrapper.active form .content{
+    display: none;
+  }
+form .content i{
+    color: #0B85ff;
+    font-size: 55px;
+}
+form .content p{
+    color: #0B85ff;
+    font-size: 16px;
+    margin-top: 15px;
+}
+.wrapper .details{
+    opacity: 0;
+    margin-top: 25px;
+    pointer-events: none;
+}
+.wrapper.active .details{
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.5s 0.05s ease;
+}
+.details textarea{
+    width: 100%;
+    height:  128px;
+    color: #fff;
+    font-size: 18px;
+    outline: none;
+    background: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+}
+.details .buttons{
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+.buttons button{
+    height: 55px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #0B85ff;
+    background-color: #fff;
+    border-radius: 5px;
+    width: calc(100% / 2 - 10px);
+    font-weight: 500;
+}
+/* .buttons button:active {
+    transform: scale(0.98);
+    /* Scaling button to 0.98 to its original size */
+    /* box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); */
+    /* Lowering the shadow */
